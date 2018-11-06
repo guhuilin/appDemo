@@ -1,0 +1,177 @@
+@import "./_minix.scss";
+@import "./common.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include sizing;
+}
+
+body,
+html,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    @include box_flex;
+    @include direction(column);
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(80px);
+    @include box_flex;
+    @include direction(column);
+    margin-bottom: pxTorem(5px);
+    .top {
+        width: 100%;
+        height: pxTorem(44px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align(center);
+    }
+    .search {
+        background: #E8E8E8;
+        margin: 0 pxTorem(12px);
+        height: pxTorem(36px);
+        @include box_flex;
+        border-radius: pxTorem(9px);
+        label {
+            @include box_flex;
+            @include align(center);
+            width: 100%;
+            .iconfont {
+                font-size: pxTorem(21px);
+                padding: 0 pxTorem(5px);
+            }
+        }
+    }
+    span {
+        font-size: pxTorem(16px);
+        padding: 0 pxTorem(12px);
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    @include box_flex;
+    overflow: hidden;
+}
+
+.left {
+    width: pxTorem(110px);
+    flex-shrink: 0;
+    .list {
+        width: 100%;
+        @include box_flex;
+        @include direction(column);
+        background: #FFFFFF;
+        li {
+            width: 100%;
+            height: pxTorem(60px);
+            font-size: pxTorem(15px);
+            @include box_flex;
+            @include justify(center);
+            @include align(center);
+            background: #F5F7F6;
+        }
+        li.hover {
+            background: #fff;
+        }
+    }
+}
+
+.right {
+    @include flex;
+    .title {
+        width: 100%;
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        padding: 0 pxTorem(12px);
+        font-size: pxTorem(16px);
+        font-weight: 700;
+        border-bottom: 1px solid #ccc;
+    }
+    .cont {
+        width: 100%;
+        .contList {
+            width: 100%;
+            @include box_flex;
+            @include justify(space-around);
+            @include flexWrap(wrap);
+            dl {
+                width: 31%;
+                @include box_flex;
+                @include direction(column);
+                padding: pxTorem(6px) 0;
+                margin-bottom: pxTorem(8px);
+                dd {
+                    @include box_flex;
+                    @include justify(center);
+                    @include align(center);
+                    font-size: pxTorem(13px);
+                }
+                dt {
+                    width: 150px;
+                    padding: pxTorem(4px);
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pull {
+    width: 100%;
+    height: pxTorem(40px);
+    @include box_flex;
+    @include justify(center);
+    @include align(center);
+    position: absolute;
+    left: 0;
+    img {
+        width: pxTorem(30px);
+        height: pxTorem(30px);
+    }
+}
+
+.top {
+    top: pxTorem(-40px);
+}
+
+.bot {
+    bottom: pxTorem(-40px);
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(54px);
+    @include box_flex;
+    @include justify(space-between);
+    @include align(center);
+    background: #ccc;
+    li {
+        width: 100%;
+        height: pxTorem(60px);
+        font-size: pxTorem(13px);
+        @include flex;
+        @include box_flex;
+        @include direction(column);
+        @include justify(center);
+        @include align(center);
+        background: #F5F7F6;
+        .iconfont {
+            font-size: pxTorem(21px);
+            padding: 0 pxTorem(12px);
+        }
+    }
+    li.active {
+        color: #D9679A;
+    }
+}
